@@ -29,8 +29,13 @@ for (let i = 0; i < rows; i++) {
     let cell = document.createElement('div');
     cell.setAttribute('class', 'cell');
     cell.setAttribute('contentEditable', true);
-    rowContainer.appendChild(cell);
 
+    // Attributes for cell identification and its storage
+    cell.setAttribute('rid', i);
+    cell.setAttribute('cid', j);
+
+    cell.setAttribute('spellcheck', false);
+    rowContainer.appendChild(cell);
     addEventListenerAddressBarDisplay(cell, i, j);
   }
   cellsContainer.appendChild(rowContainer);
@@ -40,6 +45,10 @@ function addEventListenerAddressBarDisplay(cell, i, j) {
   cell.addEventListener('click', (e) => {
     let rowID = i + 1;
     let colID = String.fromCharCode(65 + j);
-    addressBar.value = `${rowID}${colID}`;
+    addressBar.value = `${colID}${rowID}`;
   });
 }
+
+// default selected cell
+let firstCell = document.querySelector('.cell');
+firstCell.click();
