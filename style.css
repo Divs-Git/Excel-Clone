@@ -175,3 +175,16 @@ body {
   text-decoration-thickness: 3px;
   font-size: 0.9rem;
 }
+
+/* Color Pickers */
+.color-prop {
+  position: relative;
+}
+
+.color-prop input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
