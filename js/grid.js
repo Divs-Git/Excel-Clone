@@ -45,6 +45,10 @@ function addEventListenerAddressBarDisplay(cell, i, j) {
   cell.addEventListener('click', (e) => {
     let rowID = i + 1;
     let colID = String.fromCharCode(65 + j);
-    addressBar.value = `${rowID}${colID}`;
+    addressBar.value = `${colID}${rowID}`;
   });
 }
+
+// default selected cell
+let firstCell = document.querySelector('.cell');
+firstCell.click();

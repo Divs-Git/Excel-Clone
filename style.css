@@ -32,6 +32,7 @@ body {
 .cellprop-actions-container > * {
   display: inline-block;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .cellprop-actions-container > select {
@@ -186,5 +187,4 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  cursor: pointer;
 }
