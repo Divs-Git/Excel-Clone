@@ -15,6 +15,7 @@ for (let i = 0; i < rows; i++) {
       BGColor: '#000000',
       value: '',
       formula: '',
+      children: [],
     };
     sheetRow.push(cellProp);
   }
@@ -110,6 +111,10 @@ function attachCellProperties(cell) {
         rightAlignment.style.backgroundColor = activeColorProp;
         break;
     }
+
+    let formulaBar = document.querySelector('.formula-bar');
+    formulaBar.value = cellProp.formula;
+    cell.value = cellProp.value;
   });
 }
 
